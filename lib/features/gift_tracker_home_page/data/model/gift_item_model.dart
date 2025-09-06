@@ -32,4 +32,30 @@ class GiftItem {
       isReminderSet: isReminderSet ?? this.isReminderSet,
     );
   }
+
+  // Convert GiftItem to JSON
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'recipientName': recipientName,
+      'giftIdea': giftIdea,
+      'occasion': occasion,
+      'reminderDate': reminderDate?.millisecondsSinceEpoch,
+      'isReminderSet': isReminderSet,
+    };
+  }
+
+  // Create GiftItem from JSON
+  factory GiftItem.fromJson(Map<String, dynamic> json) {
+    return GiftItem(
+      id: json['id'] as String,
+      recipientName: json['recipientName'] as String,
+      giftIdea: json['giftIdea'] as String,
+      occasion: json['occasion'] as String,
+      reminderDate: json['reminderDate'] != null
+          ? DateTime.fromMillisecondsSinceEpoch(json['reminderDate'] as int)
+          : null,
+      isReminderSet: json['isReminderSet'] as bool? ?? false,
+    );
+  }
 }
