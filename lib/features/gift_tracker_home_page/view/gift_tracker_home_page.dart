@@ -17,7 +17,7 @@ class GiftTrackerHomePage extends StatefulWidget {
 }
 
 class _GiftTrackerHomePageState extends State<GiftTrackerHomePage> {
-  List<GiftItem> giftItems = []; // Start with empty list
+  List<GiftItem> giftItems = []; 
   static const String _storageKey = 'gift_items';
 
   @override

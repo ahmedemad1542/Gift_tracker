@@ -21,7 +21,11 @@ def flutterVersionName = localProperties.getProperty('flutter.versionName')
 if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
-
+def keyProperties = new Properties()
+def keyPropertiesFile = rootProject.file("key.properties")
+if (keyPropertiesFile.exists()) {
+    keyProperties.load(new FileInputStream(keyPropertiesFile))
+}
 android {
     namespace "com.example.gift_tracker"
     compileSdk flutter.compileSdkVersion
@@ -49,8 +53,8 @@ android {
         // You can update these as needed:
         minSdkVersion flutter.minSdkVersion
         targetSdkVersion flutter.targetSdkVersion
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
+        versionCode 1
+        versionName "1.0"
         
         // Enable multidex support for larger APKs
         multiDexEnabled true
