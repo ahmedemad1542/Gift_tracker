@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:gift_tracker_new/features/gift_tracker_home_page/data/model/gift_item_model.dart';
-import 'package:gift_tracker_new/features/gift_tracker_home_page/widgets/add_gift_bottom_sheet.dart';
+import 'package:gift_tracker_new/features/add_gift/view/add_gift_bottom_sheet.dart';
 import 'package:gift_tracker_new/features/gift_tracker_home_page/widgets/add_gift_fap_widget.dart';
 import 'package:gift_tracker_new/features/gift_tracker_home_page/widgets/empty_gift_list_widget.dart';
 import 'package:gift_tracker_new/features/gift_tracker_home_page/widgets/gift_list_view_widget.dart';
